@@ -1170,3 +1170,29 @@ export default function HomePage() {
     </main>
   );
 }
+<footer
+  style={{
+    background: "#183b4d",
+    color: "#ffffff",
+    padding: "32px",
+    marginTop: "40px",
+  }}
+>
+  <div
+    style={{
+      maxWidth: "1280px",
+      margin: "0 auto",
+      display: "flex",
+      flexDirection: "column",
+      gap: "8px",
+      fontSize: "14px",
+    }}
+  >
+    <strong>W&Co Designs Pty Ltd</strong>
+    <div>ABN 35 654 306 162</div>
+    <div>Phone: (03) 9873 8484</div>
+    <div style={{ opacity: 0.7, marginTop: "10px" }}>
+      © {new Date().getFullYear()} W&Co Designs Pty Ltd. All rights reserved.
+    </div>
+  </div>
+</footer>
