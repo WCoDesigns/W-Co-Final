@@ -38,7 +38,7 @@ export default function HomePage() {
           position: "sticky",
           top: 0,
           zIndex: 20,
-          background: "rgba(247,245,243,0.92)",
+          background: "rgba(247,245,243,0.88)",
           backdropFilter: "blur(10px)",
           borderBottom: "1px solid rgba(0,0,0,0.06)",
         }}
@@ -77,174 +77,164 @@ export default function HomePage() {
         style={{
           maxWidth: "1280px",
           margin: "0 auto",
-          padding: "72px 32px 40px 32px",
+          padding: "48px 32px 40px 32px",
         }}
       >
         <div
           style={{
-            display: "grid",
-            gridTemplateColumns: "1.1fr 0.9fr",
-            gap: "36px",
-            alignItems: "stretch",
+            minHeight: "720px",
+            borderRadius: "34px",
+            overflow: "hidden",
+            position: "relative",
+            backgroundImage:
+              'linear-gradient(90deg, rgba(19,19,19,0.70) 0%, rgba(19,19,19,0.52) 38%, rgba(19,19,19,0.18) 72%, rgba(19,19,19,0.08) 100%), url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=80")',
+            backgroundSize: "cover",
+            backgroundPosition: "center center",
+            boxShadow: "0 18px 44px rgba(0,0,0,0.12)",
           }}
         >
           <div
             style={{
-              background: "#FFFFFF",
-              borderRadius: "28px",
-              padding: "56px",
-              boxShadow: "0 14px 40px rgba(0,0,0,0.06)",
-              border: "1px solid rgba(0,0,0,0.04)",
+              position: "absolute",
+              inset: 0,
+              background:
+                "linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.10) 100%)",
             }}
-          >
-            <div
-              style={{
-                display: "inline-block",
-                background: "#EFE7E2",
-                color: "#B85A2B",
-                padding: "10px 16px",
-                borderRadius: "999px",
-                fontSize: "13px",
-                fontWeight: 700,
-                letterSpacing: "0.4px",
-                marginBottom: "22px",
-                textTransform: "uppercase",
-              }}
-            >
-              Australian Made Commercial Furniture
-            </div>
-
-            <h1
-              style={{
-                fontSize: "68px",
-                lineHeight: 1.02,
-                margin: "0 0 20px 0",
-                letterSpacing: "-2.5px",
-              }}
-            >
-              Furniture for
-              <br />
-              refined commercial
-              <br />
-              interiors.
-            </h1>
-
-            <p
-              style={{
-                fontSize: "21px",
-                lineHeight: 1.6,
-                color: "#4E4E4E",
-                maxWidth: "700px",
-                marginBottom: "30px",
-              }}
-            >
-              W&Co Designs curates premium Australian-made furniture for workplace,
-              hospitality and public environments — balancing warmth, durability and
-              elevated design.
-            </p>
-
-            <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
-              <a
-                href="#showcase"
-                style={{
-                  background: "#D95D2B",
-                  color: "#FFFFFF",
-                  textDecoration: "none",
-                  padding: "15px 28px",
-                  borderRadius: "999px",
-                  fontWeight: 700,
-                  display: "inline-block",
-                }}
-              >
-                View Collection
-              </a>
-              <a
-                href="#contact"
-                style={{
-                  background: "#FFFFFF",
-                  color: "#131313",
-                  textDecoration: "none",
-                  padding: "15px 28px",
-                  borderRadius: "999px",
-                  fontWeight: 700,
-                  display: "inline-block",
-                  border: "1px solid rgba(0,0,0,0.12)",
-                }}
-              >
-                Discuss a Project
-              </a>
-            </div>
-          </div>
+          />
 
           <div
             style={{
-              background: "linear-gradient(135deg, #EAE5E0 0%, #DDD6D0 100%)",
-              borderRadius: "28px",
-              minHeight: "540px",
-              padding: "28px",
-              boxShadow: "0 14px 40px rgba(0,0,0,0.06)",
-              border: "1px solid rgba(0,0,0,0.04)",
+              position: "relative",
+              zIndex: 2,
               display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-between",
+              alignItems: "stretch",
+              minHeight: "720px",
             }}
           >
             <div
               style={{
-                alignSelf: "flex-end",
-                background: "#131313",
-                color: "#FFFFFF",
-                padding: "10px 14px",
-                borderRadius: "999px",
-                fontSize: "13px",
-                letterSpacing: "0.3px",
-              }}
-            >
-              Design-led. Durable. Local.
-            </div>
-
-            <div
-              style={{
-                flex: 1,
-                borderRadius: "22px",
-                background: "rgba(255,255,255,0.38)",
-                border: "1px solid rgba(255,255,255,0.45)",
+                width: "100%",
+                maxWidth: "720px",
+                padding: "72px 58px",
                 display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                color: "#6A625D",
-                fontStyle: "italic",
-                fontSize: "20px",
-                margin: "22px 0",
+                flexDirection: "column",
+                justifyContent: "space-between",
               }}
             >
-              Hero Product / Lifestyle Image
-            </div>
+              <div>
+                <div
+                  style={{
+                    display: "inline-block",
+                    background: "rgba(255,255,255,0.14)",
+                    color: "#FFFFFF",
+                    padding: "10px 16px",
+                    borderRadius: "999px",
+                    fontSize: "13px",
+                    fontWeight: 700,
+                    letterSpacing: "0.5px",
+                    marginBottom: "22px",
+                    textTransform: "uppercase",
+                    border: "1px solid rgba(255,255,255,0.22)",
+                  }}
+                >
+                  Australian Made Commercial Furniture
+                </div>
 
-            <div
-              style={{
-                background: "#FFFFFF",
-                borderRadius: "20px",
-                padding: "24px",
-              }}
-            >
+                <h1
+                  style={{
+                    fontSize: "74px",
+                    lineHeight: 1.02,
+                    margin: "0 0 22px 0",
+                    letterSpacing: "-2.8px",
+                    color: "#FFFFFF",
+                    maxWidth: "620px",
+                  }}
+                >
+                  Warm,
+                  refined pieces
+                  for modern
+                  interiors.
+                </h1>
+
+                <p
+                  style={{
+                    fontSize: "21px",
+                    lineHeight: 1.7,
+                    color: "rgba(255,255,255,0.88)",
+                    maxWidth: "640px",
+                    marginBottom: "28px",
+                  }}
+                >
+                  W&Co Designs curates premium Australian-made furniture for workplace,
+                  hospitality and public environments — balancing comfort,
+                  craftsmanship and a distinctly elevated design language.
+                </p>
+
+                <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
+                  <a
+                    href="#showcase"
+                    style={{
+                      background: "#D95D2B",
+                      color: "#FFFFFF",
+                      textDecoration: "none",
+                      padding: "15px 28px",
+                      borderRadius: "999px",
+                      fontWeight: 700,
+                      display: "inline-block",
+                    }}
+                  >
+                    View Collection
+                  </a>
+                  <a
+                    href="#contact"
+                    style={{
+                      background: "rgba(255,255,255,0.12)",
+                      color: "#FFFFFF",
+                      textDecoration: "none",
+                      padding: "15px 28px",
+                      borderRadius: "999px",
+                      fontWeight: 700,
+                      display: "inline-block",
+                      border: "1px solid rgba(255,255,255,0.22)",
+                    }}
+                  >
+                    Discuss a Project
+                  </a>
+                </div>
+              </div>
+
               <div
                 style={{
-                  fontSize: "14px",
-                  textTransform: "uppercase",
-                  letterSpacing: "0.8px",
-                  color: "#B85A2B",
-                  fontWeight: 700,
-                  marginBottom: "10px",
+                  display: "grid",
+                  gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+                  gap: "16px",
+                  marginTop: "36px",
                 }}
               >
-                Brand Position
+                {[
+                  ["Australian Made", "Locally crafted for commercial durability"],
+                  ["Design Led", "Minimal, warm and architecturally considered"],
+                  ["Specified for Projects", "Suitable for workplace and hospitality use"],
+                ].map(([title, text]) => (
+                  <div
+                    key={title}
+                    style={{
+                      background: "rgba(255,255,255,0.12)",
+                      border: "1px solid rgba(255,255,255,0.18)",
+                      borderRadius: "18px",
+                      padding: "18px",
+                      backdropFilter: "blur(4px)",
+                    }}
+                  >
+                    <div style={{ color: "#FFFFFF", fontWeight: 700, marginBottom: "8px" }}>
+                      {title}
+                    </div>
+                    <div style={{ color: "rgba(255,255,255,0.82)", lineHeight: 1.55, fontSize: "14px" }}>
+                      {text}
+                    </div>
+                  </div>
+                ))}
               </div>
-              <p style={{ margin: 0, color: "#4E4E4E", lineHeight: 1.7 }}>
-                Sophisticated furniture selections for designers, architects and
-                commercial clients seeking warmth, longevity and a distinctly
-                Australian sensibility.
-              </p>
             </div>
           </div>
         </div>
@@ -630,3 +620,4 @@ export default function HomePage() {
     </main>
   );
 }
+It hasn't changed.  It is still plain.  Can you put in a font and black orang background image?  Please make it look like the square bear website and create code that will actually work.  I do not want anything more to do with vercel today.  Just create the code in the backend and I will do it later.  The Vercel live does not appear to be changing.  It is making me nervous.  why is the code in the back end not changing the front end?  Please show me what you mean and where to update code. So I can see what you are changing. Give me step by step instructions. Here’s the reality, plainly: the backend code is only changing in your code editor/canvas until those changes are committed to GitHub and Vercel successfully redeploys the latest commit. Your live site at `w-co-final.vercel.app` only ever shows the **last successful deployment**, not whatever is currently in the editor. That’s why the code “in the backend” can look different while the front end stays the same. To make the homepage closer to the Square Bear style — large visual-led hero, short punchy copy, category-led navigation, and image-heavy sections — we should update `src/HomePage.js` with a full-bleed hero background image, stronger visual contrast, and a cleaner product/project rhythm. Square Bear’s homepage leans heavily on product categories, bold statements, prominent image panels, and Australian-made positioning, which is a useful reference point for your furniture brand. ([square-bear.com](https://www.square-bear.com/?srsltid=AfmBOoohC5AuOQxWGrFlvu16XhvnAgUCwdco5vDHklLoWL23f4O475aH)) So, two things below: first, I’ve updated the site code in the canvas so you have a working version ready; second, I’m showing you exactly **what file** to replace and **what changed** so you can push it later when you’re ready. ([square-bear.com](https://www.square-bear.com/?srsltid=AfmBOoohC5AuOQxWGrFlvu16XhvnAgUCwdco5vDHklLoWL23f4O475aH))
