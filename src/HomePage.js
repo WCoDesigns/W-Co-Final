@@ -28,19 +28,20 @@ const sectionLabel = {
 };
 
 const sectionTitle = {
-  fontSize: "40px",
+  fontSize: "42px",
   fontWeight: 700,
   margin: 0,
   color: brand.midnightSky,
-  letterSpacing: "-0.8px",
+  letterSpacing: "-1px",
+  lineHeight: 1.05,
 };
 
-const cardStyle = {
+const imageCard = {
+  borderRadius: "26px",
+  overflow: "hidden",
+  boxShadow: "0 18px 40px rgba(24,59,77,0.10)",
+  border: "1px solid rgba(24,59,77,0.06)",
   background: brand.white,
-  borderRadius: "24px",
-  padding: "22px",
-  boxShadow: "0 14px 34px rgba(24,59,77,0.08)",
-  border: "1px solid rgba(24,59,77,0.08)",
 };
 
 export default function HomePage() {
@@ -57,15 +58,15 @@ export default function HomePage() {
         style={{
           position: "sticky",
           top: 0,
-          zIndex: 20,
-          background: "rgba(24,59,77,0.9)",
+          zIndex: 30,
+          background: "rgba(24,59,77,0.88)",
           backdropFilter: "blur(10px)",
           borderBottom: "1px solid rgba(255,255,255,0.08)",
         }}
       >
         <div
           style={{
-            maxWidth: "1280px",
+            maxWidth: "1320px",
             margin: "0 auto",
             padding: "20px 32px",
             display: "flex",
@@ -94,9 +95,9 @@ export default function HomePage() {
               flexWrap: "wrap",
             }}
           >
-            <a href="#showcase" style={navLink}>Showcase</a>
+            <a href="#categories" style={navLink}>Categories</a>
+            <a href="#featured" style={navLink}>Featured</a>
             <a href="#projects" style={navLink}>Projects</a>
-            <a href="#catalogue" style={navLink}>Catalogue</a>
             <a href="#contact" style={navLink}>Contact</a>
           </nav>
         </div>
@@ -104,265 +105,292 @@ export default function HomePage() {
 
       <section
         style={{
-          maxWidth: "1280px",
-          margin: "0 auto",
-          padding: "42px 32px 34px 32px",
+          minHeight: "96vh",
+          position: "relative",
+          overflow: "hidden",
+          backgroundImage:
+            'linear-gradient(90deg, rgba(24,59,77,0.88) 0%, rgba(24,59,77,0.66) 36%, rgba(24,59,77,0.24) 68%, rgba(24,59,77,0.10) 100%), url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=2000&q=80")',
+          backgroundSize: "cover",
+          backgroundPosition: "center center",
+          backgroundAttachment: "fixed",
         }}
       >
         <div
           style={{
-            minHeight: "760px",
-            borderRadius: "36px",
-            overflow: "hidden",
-            position: "relative",
-            backgroundImage:
-              'linear-gradient(90deg, rgba(24,59,77,0.88) 0%, rgba(24,59,77,0.70) 36%, rgba(24,59,77,0.28) 68%, rgba(24,59,77,0.16) 100%), url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1800&q=80")',
-            backgroundAttachment: "fixed",
-            backgroundSize: "cover",
-            backgroundPosition: "center center",
-            boxShadow: "0 18px 44px rgba(24,59,77,0.16)",
+            maxWidth: "1320px",
+            margin: "0 auto",
+            padding: "80px 32px 60px 32px",
+            minHeight: "96vh",
+            display: "flex",
+            alignItems: "center",
           }}
         >
-          <div
-            style={{
-              position: "absolute",
-              inset: 0,
-              background:
-                "linear-gradient(180deg, rgba(24,59,77,0.02) 0%, rgba(24,59,77,0.12) 100%)",
-            }}
-          />
-
-          <div
-            style={{
-              position: "absolute",
-              right: "42px",
-              bottom: "42px",
-              width: "300px",
-              height: "210px",
-              borderRadius: "24px",
-              overflow: "hidden",
-              backgroundImage:
-                'url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1000&q=80")',
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              boxShadow: "0 20px 44px rgba(0,0,0,0.28)",
-              border: "1px solid rgba(255,255,255,0.2)",
-              zIndex: 2,
-            }}
-          />
-
-          <div
-            style={{
-              position: "absolute",
-              right: "110px",
-              bottom: "185px",
-              width: "200px",
-              height: "140px",
-              borderRadius: "20px",
-              overflow: "hidden",
-              backgroundImage:
-                'url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80")',
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              boxShadow: "0 18px 34px rgba(0,0,0,0.18)",
-              border: "1px solid rgba(255,255,255,0.18)",
-              opacity: 0.92,
-              zIndex: 2,
-            }}
-          />
-
-          <div
-            style={{
-              position: "relative",
-              zIndex: 3,
-              display: "flex",
-              alignItems: "stretch",
-              minHeight: "760px",
-            }}
-          >
+          <div style={{ maxWidth: "780px" }}>
             <div
               style={{
-                width: "100%",
-                maxWidth: "760px",
-                padding: "74px 58px",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "space-between",
+                display: "inline-block",
+                background: "rgba(243,114,78,0.18)",
+                color: brand.white,
+                padding: "12px 18px",
+                borderRadius: "999px",
+                fontSize: "13px",
+                fontWeight: 700,
+                letterSpacing: "0.6px",
+                marginBottom: "24px",
+                textTransform: "uppercase",
+                border: "1px solid rgba(255,255,255,0.18)",
               }}
             >
-              <div>
-                <div
-                  style={{
-                    display: "inline-block",
-                    background: "rgba(243,114,78,0.16)",
-                    color: brand.white,
-                    padding: "11px 16px",
-                    borderRadius: "999px",
-                    fontSize: "13px",
-                    fontWeight: 700,
-                    letterSpacing: "0.5px",
-                    marginBottom: "22px",
-                    textTransform: "uppercase",
-                    border: "1px solid rgba(255,255,255,0.18)",
-                  }}
-                >
-                  Australian Made Commercial Furniture
-                </div>
+              Australian Made Commercial Furniture
+            </div>
 
-                <h1
-                  style={{
-                    fontSize: "76px",
-                    lineHeight: 0.98,
-                    margin: "0 0 24px 0",
-                    letterSpacing: "-2.8px",
-                    color: brand.white,
-                    maxWidth: "640px",
-                  }}
-                >
-                  Warm,
-                  <br />
-                  refined pieces
-                  <br />
-                  for modern
-                  <br />
-                  interiors.
-                </h1>
+            <h1
+              style={{
+                fontSize: "92px",
+                lineHeight: 0.95,
+                margin: "0 0 24px 0",
+                letterSpacing: "-3px",
+                color: brand.white,
+                maxWidth: "760px",
+              }}
+            >
+              Furniture with
+              <br />
+              warmth,
+              <br />
+              structure
+              <br />
+              and intent.
+            </h1>
 
-                <p
-                  style={{
-                    fontSize: "21px",
-                    lineHeight: 1.7,
-                    color: "rgba(255,255,255,0.9)",
-                    maxWidth: "650px",
-                    marginBottom: "30px",
-                  }}
-                >
-                  W&Co Designs curates premium Australian-made furniture for workplace,
-                  hospitality and public environments — balancing warmth,
-                  durability and a distinctly refined commercial aesthetic.
-                </p>
+            <p
+              style={{
+                fontSize: "23px",
+                lineHeight: 1.7,
+                color: "rgba(255,255,255,0.9)",
+                maxWidth: "720px",
+                marginBottom: "32px",
+              }}
+            >
+              W&Co Designs curates premium furniture for workplace, hospitality
+              and public interiors — balancing form, comfort and commercial
+              durability through a distinctly refined Australian lens.
+            </p>
 
-                <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
-                  <a
-                    href="#showcase"
-                    style={{
-                      background: brand.sunbakedOrange,
-                      color: brand.white,
-                      textDecoration: "none",
-                      padding: "15px 28px",
-                      borderRadius: "999px",
-                      fontWeight: 700,
-                      display: "inline-block",
-                    }}
-                  >
-                    View Collection
-                  </a>
-                  <a
-                    href="#contact"
-                    style={{
-                      background: "rgba(255,255,255,0.12)",
-                      color: brand.white,
-                      textDecoration: "none",
-                      padding: "15px 28px",
-                      borderRadius: "999px",
-                      fontWeight: 700,
-                      display: "inline-block",
-                      border: "1px solid rgba(255,255,255,0.22)",
-                    }}
-                  >
-                    Discuss a Project
-                  </a>
-                </div>
-              </div>
-
-              <div
+            <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
+              <a
+                href="#categories"
                 style={{
-                  display: "grid",
-                  gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
-                  gap: "16px",
-                  marginTop: "36px",
+                  background: brand.sunbakedOrange,
+                  color: brand.white,
+                  textDecoration: "none",
+                  padding: "16px 30px",
+                  borderRadius: "999px",
+                  fontWeight: 700,
+                  display: "inline-block",
                 }}
               >
-                {[
-                  ["Australian Made", "Locally crafted for commercial durability"],
-                  ["Design Led", "Warm, considered and architecturally refined"],
-                  ["Project Ready", "Suitable for workplace and hospitality use"],
-                ].map(([title, text]) => (
-                  <div
-                    key={title}
-                    style={{
-                      background: "rgba(255,255,255,0.14)",
-                      border: "1px solid rgba(255,255,255,0.18)",
-                      borderRadius: "18px",
-                      padding: "18px",
-                      backdropFilter: "blur(4px)",
-                    }}
-                  >
-                    <div
-                      style={{
-                        color: brand.white,
-                        fontWeight: 700,
-                        marginBottom: "8px",
-                      }}
-                    >
-                      {title}
-                    </div>
-                    <div
-                      style={{
-                        color: "rgba(255,255,255,0.82)",
-                        lineHeight: 1.55,
-                        fontSize: "14px",
-                      }}
-                    >
-                      {text}
-                    </div>
-                  </div>
-                ))}
-              </div>
+                Explore Categories
+              </a>
+
+              <a
+                href="#projects"
+                style={{
+                  background: "rgba(255,255,255,0.12)",
+                  color: brand.white,
+                  textDecoration: "none",
+                  padding: "16px 30px",
+                  borderRadius: "999px",
+                  fontWeight: 700,
+                  display: "inline-block",
+                  border: "1px solid rgba(255,255,255,0.22)",
+                }}
+              >
+                View Projects
+              </a>
             </div>
           </div>
         </div>
       </section>
 
       <section
-        id="showcase"
+        id="categories"
         style={{
-          maxWidth: "1280px",
+          maxWidth: "1320px",
           margin: "0 auto",
-          padding: "20px 32px 56px 32px",
+          padding: "80px 32px 40px 32px",
         }}
       >
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "end",
-            gap: "20px",
-            flexWrap: "wrap",
-            marginBottom: "28px",
-          }}
-        >
-          <div>
-            <div style={sectionLabel}>Featured Categories</div>
-            <h2 style={sectionTitle}>Furniture Showcase</h2>
-          </div>
-          <p
-            style={{
-              maxWidth: "540px",
-              color: brand.mutedText,
-              lineHeight: 1.7,
-              margin: 0,
-            }}
-          >
-            A curated introduction to the categories W&Co Designs can present,
-            specify and refine for commercial spaces.
-          </p>
+        <div style={{ marginBottom: "28px" }}>
+          <div style={sectionLabel}>Categories</div>
+          <h2 style={sectionTitle}>A visual introduction to the collection.</h2>
         </div>
 
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+            gridTemplateColumns: "1.25fr 0.75fr",
+            gap: "24px",
+            marginBottom: "24px",
+          }}
+        >
+          <div style={imageCard}>
+            <div
+              style={{
+                height: "560px",
+                backgroundImage:
+                  'url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=80")',
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            />
+            <div style={{ padding: "26px" }}>
+              <div style={sectionLabel}>Featured</div>
+              <h3 style={{ fontSize: "34px", margin: "0 0 10px 0", color: brand.midnightSky }}>
+                Reception & lounge furniture
+              </h3>
+              <p style={{ color: brand.mutedText, lineHeight: 1.7, margin: 0 }}>
+                Statement pieces for first impressions, waiting areas and hospitality-led
+                environments where comfort and visual confidence matter.
+              </p>
+            </div>
+          </div>
+
+          <div
+            style={{
+              display: "grid",
+              gridTemplateRows: "1fr 1fr",
+              gap: "24px",
+            }}
+          >
+            {[
+              [
+                "Workplace seating",
+                "Ergonomic and visually resolved seating selections for focused, flexible environments.",
+              ],
+              [
+                "Collaborative tables",
+                "Tables designed to support teamwork, discussion and open-plan commercial settings.",
+              ],
+            ].map(([title, text], i) => (
+              <div key={i} style={imageCard}>
+                <div
+                  style={{
+                    height: "250px",
+                    background: `linear-gradient(135deg, ${brand.warmSunlight} 0%, #f0e2d5 100%)`,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    color: brand.midnightSky,
+                    fontStyle: "italic",
+                  }}
+                >
+                  Category Image Placeholder
+                </div>
+                <div style={{ padding: "24px" }}>
+                  <h3 style={{ fontSize: "28px", margin: "0 0 10px 0", color: brand.midnightSky }}>
+                    {title}
+                  </h3>
+                  <p style={{ color: brand.mutedText, lineHeight: 1.7, margin: 0 }}>
+                    {text}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section
+        style={{
+          minHeight: "72vh",
+          position: "relative",
+          backgroundImage:
+            'linear-gradient(90deg, rgba(24,59,77,0.70) 0%, rgba(24,59,77,0.46) 38%, rgba(24,59,77,0.16) 70%, rgba(24,59,77,0.10) 100%), url("https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1800&q=80")',
+          backgroundSize: "cover",
+          backgroundPosition: "center center",
+          backgroundAttachment: "fixed",
+          margin: "40px 0 20px 0",
+        }}
+      >
+        <div
+          style={{
+            maxWidth: "1320px",
+            margin: "0 auto",
+            minHeight: "72vh",
+            padding: "70px 32px",
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          <div
+            style={{
+              maxWidth: "700px",
+              background: "rgba(255,255,255,0.10)",
+              border: "1px solid rgba(255,255,255,0.16)",
+              borderRadius: "28px",
+              padding: "34px",
+              backdropFilter: "blur(6px)",
+            }}
+          >
+            <div
+              style={{
+                fontSize: "13px",
+                textTransform: "uppercase",
+                letterSpacing: "1px",
+                color: brand.warmSunlight,
+                fontWeight: 700,
+                marginBottom: "12px",
+              }}
+            >
+              Australian Made
+            </div>
+            <h2
+              style={{
+                fontSize: "54px",
+                lineHeight: 1.02,
+                margin: "0 0 18px 0",
+                color: brand.white,
+                letterSpacing: "-1.6px",
+              }}
+            >
+              Designed to feel elevated,
+              <br />
+              built to work hard.
+            </h2>
+            <p
+              style={{
+                color: "rgba(255,255,255,0.9)",
+                lineHeight: 1.8,
+                fontSize: "18px",
+                margin: 0,
+              }}
+            >
+              From specifier-led fitouts to hospitality interiors, W&Co Designs
+              presents furniture that combines longevity, warmth and commercial
+              performance without compromising visual clarity.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="featured"
+        style={{
+          maxWidth: "1320px",
+          margin: "0 auto",
+          padding: "80px 32px 30px 32px",
+        }}
+      >
+        <div style={{ marginBottom: "28px" }}>
+          <div style={sectionLabel}>Featured Selection</div>
+          <h2 style={sectionTitle}>Structured, image-led blocks for your product story.</h2>
+        </div>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
             gap: "24px",
           }}
         >
@@ -371,50 +399,38 @@ export default function HomePage() {
             "Collaborative Tables",
             "Reception Lounges",
           ].map((title, index) => (
-            <div key={index} style={cardStyle}>
+            <div key={index} style={imageCard}>
               <div
                 style={{
-                  height: "240px",
-                  background: `linear-gradient(135deg, ${brand.warmSunlight} 0%, #f0e4d8 100%)`,
-                  borderRadius: "18px",
+                  height: "340px",
+                  background: `linear-gradient(135deg, ${brand.warmSunlight} 0%, #edd9cc 100%)`,
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
                   color: brand.midnightSky,
                   fontStyle: "italic",
-                  marginBottom: "18px",
                 }}
               >
                 Product Image Placeholder
               </div>
-              <h3
-                style={{
-                  fontSize: "28px",
-                  margin: "0 0 12px 0",
-                  color: brand.midnightSky,
-                }}
-              >
-                {title}
-              </h3>
-              <p
-                style={{
-                  color: brand.mutedText,
-                  lineHeight: 1.7,
-                  marginBottom: "18px",
-                }}
-              >
-                Handcrafted in Australia, these pieces are designed to bring style,
-                comfort and durability to commercial environments.
-              </p>
-              <div
-                style={{
-                  fontSize: "14px",
-                  color: brand.sunbakedOrange,
-                  fontWeight: 700,
-                  letterSpacing: "0.2px",
-                }}
-              >
-                View category →
+              <div style={{ padding: "24px" }}>
+                <h3 style={{ fontSize: "30px", margin: "0 0 12px 0", color: brand.midnightSky }}>
+                  {title}
+                </h3>
+                <p style={{ color: brand.mutedText, lineHeight: 1.7, marginBottom: "18px" }}>
+                  Handcrafted in Australia and designed for interiors that need
+                  durability, warmth and visual confidence.
+                </p>
+                <div
+                  style={{
+                    fontSize: "14px",
+                    color: brand.sunbakedOrange,
+                    fontWeight: 700,
+                    letterSpacing: "0.2px",
+                  }}
+                >
+                  Learn more →
+                </div>
               </div>
             </div>
           ))}
@@ -424,121 +440,72 @@ export default function HomePage() {
       <section
         id="projects"
         style={{
-          maxWidth: "1280px",
+          maxWidth: "1320px",
           margin: "0 auto",
-          padding: "20px 32px 56px 32px",
+          padding: "80px 32px 40px 32px",
         }}
       >
+        <div style={{ marginBottom: "28px" }}>
+          <div style={sectionLabel}>Projects</div>
+          <h2 style={sectionTitle}>Commercial spaces shaped by strong furniture decisions.</h2>
+        </div>
+
         <div
           style={{
-            background: brand.white,
-            borderRadius: "28px",
-            padding: "40px",
-            boxShadow: "0 14px 40px rgba(24,59,77,0.06)",
-            border: "1px solid rgba(24,59,77,0.04)",
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gap: "24px",
           }}
         >
-          <div style={sectionLabel}>Selected Work</div>
-          <h2 style={{ ...sectionTitle, marginBottom: "18px" }}>Case Studies</h2>
-
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: "24px",
-            }}
-          >
-            <div
-              style={{
-                background: brand.softBackground,
-                borderRadius: "22px",
-                padding: "28px",
-              }}
-            >
+          {[
+            [
+              "Melbourne Tech Hub",
+              "A custom fitout featuring modular lounges and collaborative desks for a modern co-working environment.",
+            ],
+            [
+              "Regional Council Chambers",
+              "Elegant and durable pieces designed to complement civic interiors with warmth and authority.",
+            ],
+          ].map(([title, text], i) => (
+            <div key={i} style={imageCard}>
               <div
                 style={{
-                  height: "220px",
-                  background: `linear-gradient(135deg, ${brand.warmSunlight} 0%, #ead6ca 100%)`,
-                  borderRadius: "16px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  color: brand.midnightSky,
-                  fontStyle: "italic",
-                  marginBottom: "18px",
+                  height: "340px",
+                  backgroundImage:
+                    i === 0
+                      ? 'url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=80")'
+                      : 'url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1400&q=80")',
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
                 }}
-              >
-                Project Image Placeholder
+              />
+              <div style={{ padding: "26px" }}>
+                <h3 style={{ fontSize: "30px", margin: "0 0 12px 0", color: brand.midnightSky }}>
+                  {title}
+                </h3>
+                <p style={{ color: brand.mutedText, lineHeight: 1.7, margin: 0 }}>
+                  {text}
+                </p>
               </div>
-              <h3
-                style={{
-                  fontSize: "24px",
-                  marginBottom: "10px",
-                  color: brand.midnightSky,
-                }}
-              >
-                Melbourne Tech Hub
-              </h3>
-              <p style={{ color: brand.mutedText, lineHeight: 1.7 }}>
-                A custom furniture fitout featuring modular lounges and collaborative
-                desks for a modern co-working environment.
-              </p>
             </div>
-
-            <div
-              style={{
-                background: brand.softBackground,
-                borderRadius: "22px",
-                padding: "28px",
-              }}
-            >
-              <div
-                style={{
-                  height: "220px",
-                  background: `linear-gradient(135deg, ${brand.warmSunlight} 0%, #ead6ca 100%)`,
-                  borderRadius: "16px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  color: brand.midnightSky,
-                  fontStyle: "italic",
-                  marginBottom: "18px",
-                }}
-              >
-                Project Image Placeholder
-              </div>
-              <h3
-                style={{
-                  fontSize: "24px",
-                  marginBottom: "10px",
-                  color: brand.midnightSky,
-                }}
-              >
-                Regional Council Chambers
-              </h3>
-              <p style={{ color: brand.mutedText, lineHeight: 1.7 }}>
-                Elegant, durable timber pieces designed to complement heritage
-                interiors in a civic setting.
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
       <section
         id="catalogue"
         style={{
-          maxWidth: "1280px",
+          maxWidth: "1320px",
           margin: "0 auto",
-          padding: "20px 32px 56px 32px",
+          padding: "50px 32px 40px 32px",
         }}
       >
         <div
           style={{
             background: brand.midnightSky,
             color: brand.white,
-            borderRadius: "28px",
-            padding: "42px",
+            borderRadius: "30px",
+            padding: "46px",
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
@@ -548,18 +515,19 @@ export default function HomePage() {
         >
           <div>
             <div style={{ ...sectionLabel, color: brand.warmSunlight }}>Catalogue</div>
-            <h2 style={{ fontSize: "36px", margin: "0 0 10px 0" }}>
-              Download Our Collection
+            <h2 style={{ fontSize: "38px", margin: "0 0 10px 0" }}>
+              Download our collection
             </h2>
             <p
               style={{
                 color: "rgba(255,255,255,0.78)",
-                maxWidth: "620px",
-                lineHeight: 1.7,
+                maxWidth: "660px",
+                lineHeight: 1.75,
+                margin: 0,
               }}
             >
-              A downloadable PDF catalogue will be added here once your final product
-              selections are ready for presentation.
+              A downloadable PDF catalogue can live here once your final product
+              selection is ready for presentation and client sharing.
             </p>
           </div>
 
@@ -569,7 +537,7 @@ export default function HomePage() {
               background: brand.sunbakedOrange,
               color: brand.white,
               border: "none",
-              padding: "15px 28px",
+              padding: "16px 30px",
               borderRadius: "999px",
               fontSize: "16px",
               opacity: 0.72,
@@ -581,54 +549,21 @@ export default function HomePage() {
       </section>
 
       <section
-        style={{
-          maxWidth: "1280px",
-          margin: "0 auto",
-          padding: "20px 32px 56px 32px",
-        }}
-      >
-        <div
-          style={{
-            background: `linear-gradient(135deg, ${brand.warmSunlight} 0%, #f5e0d6 100%)`,
-            borderRadius: "28px",
-            padding: "42px",
-          }}
-        >
-          <div style={{ ...sectionLabel, color: brand.midnightSky }}>Brand Ethos</div>
-          <h2 style={sectionTitle}>Our Commitment</h2>
-          <p
-            style={{
-              fontSize: "18px",
-              lineHeight: 1.85,
-              maxWidth: "980px",
-              color: brand.midnightSky,
-              margin: 0,
-            }}
-          >
-            W&Co Designs specialises in showcasing high-quality, Australian-made
-            furniture crafted with sustainability, craftsmanship, and design integrity
-            at its core. Our mission is to elevate interiors in the commercial,
-            hospitality, and public sectors across Australia.
-          </p>
-        </div>
-      </section>
-
-      <section
         id="contact"
         style={{
-          maxWidth: "1280px",
+          maxWidth: "1320px",
           margin: "0 auto",
-          padding: "20px 32px 60px 32px",
+          padding: "80px 32px 60px 32px",
         }}
       >
         <div
           style={{
-            textAlign: "center",
             background: brand.white,
-            borderRadius: "28px",
-            padding: "52px 32px",
+            borderRadius: "30px",
+            padding: "52px 36px",
             boxShadow: "0 14px 40px rgba(24,59,77,0.06)",
-            border: "1px solid rgba(24,59,77,0.04)",
+            border: "1px solid rgba(24,59,77,0.05)",
+            textAlign: "center",
           }}
         >
           <div style={sectionLabel}>Get In Touch</div>
@@ -636,13 +571,16 @@ export default function HomePage() {
           <p
             style={{
               color: brand.mutedText,
-              marginBottom: "22px",
+              marginBottom: "24px",
               fontSize: "18px",
               lineHeight: 1.7,
+              maxWidth: "760px",
+              marginLeft: "auto",
+              marginRight: "auto",
             }}
           >
-            Whether you're an architect, designer, or business owner, we’d love to
-            collaborate on your next project.
+            Whether you're an architect, designer or commercial client, W&Co Designs
+            can help shape a more resolved furniture direction for your next project.
           </p>
 
           <div
@@ -651,7 +589,7 @@ export default function HomePage() {
               justifyContent: "center",
               gap: "16px",
               flexWrap: "wrap",
-              marginBottom: "18px",
+              marginBottom: "10px",
             }}
           >
             <a
@@ -660,7 +598,7 @@ export default function HomePage() {
                 background: brand.sunbakedOrange,
                 color: brand.white,
                 textDecoration: "none",
-                padding: "15px 28px",
+                padding: "16px 28px",
                 borderRadius: "999px",
                 fontWeight: 700,
               }}
@@ -676,7 +614,7 @@ export default function HomePage() {
                 background: brand.white,
                 color: brand.midnightSky,
                 textDecoration: "none",
-                padding: "15px 28px",
+                padding: "16px 28px",
                 borderRadius: "999px",
                 fontWeight: 700,
                 border: "1px solid rgba(24,59,77,0.12)",
@@ -698,7 +636,7 @@ export default function HomePage() {
       >
         <div
           style={{
-            maxWidth: "1280px",
+            maxWidth: "1320px",
             margin: "0 auto",
             display: "flex",
             flexDirection: "column",
