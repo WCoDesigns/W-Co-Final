@@ -49,7 +49,7 @@ export default function HomePage() {
       style={{
         background: brand.softBackground,
         color: brand.textDark,
-        fontFamily: "Arial, Helvetica, sans-serif",
+        fontFamily: "Inter, Arial, Helvetica, sans-serif",
         minHeight: "100vh",
       }}
     >
@@ -117,6 +117,7 @@ export default function HomePage() {
             position: "relative",
             backgroundImage:
               'linear-gradient(90deg, rgba(24,59,77,0.88) 0%, rgba(24,59,77,0.70) 36%, rgba(24,59,77,0.28) 68%, rgba(24,59,77,0.16) 100%), url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1800&q=80")',
+            backgroundAttachment: "fixed",
             backgroundSize: "cover",
             backgroundPosition: "center center",
             boxShadow: "0 18px 44px rgba(24,59,77,0.16)",
@@ -133,8 +134,47 @@ export default function HomePage() {
 
           <div
             style={{
-              position: "relative",
+              position: "absolute",
+              right: "42px",
+              bottom: "42px",
+              width: "300px",
+              height: "210px",
+              borderRadius: "24px",
+              overflow: "hidden",
+              backgroundImage:
+                'url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1000&q=80")',
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              boxShadow: "0 20px 44px rgba(0,0,0,0.28)",
+              border: "1px solid rgba(255,255,255,0.2)",
               zIndex: 2,
+            }}
+          />
+
+          <div
+            style={{
+              position: "absolute",
+              right: "110px",
+              bottom: "185px",
+              width: "200px",
+              height: "140px",
+              borderRadius: "20px",
+              overflow: "hidden",
+              backgroundImage:
+                'url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80")',
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              boxShadow: "0 18px 34px rgba(0,0,0,0.18)",
+              border: "1px solid rgba(255,255,255,0.18)",
+              opacity: 0.92,
+              zIndex: 2,
+            }}
+          />
+
+          <div
+            style={{
+              position: "relative",
+              zIndex: 3,
               display: "flex",
               alignItems: "stretch",
               minHeight: "760px",
@@ -676,6 +716,5 @@ export default function HomePage() {
         </div>
       </footer>
     </main>
-fontFamily: "Arial, Helvetica, sans-serif"
   );
 }
