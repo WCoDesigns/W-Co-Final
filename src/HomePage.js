@@ -1,17 +1,17 @@
 import React from "react";
 
 const brand = {
-  midnightSky: "#183b4d",
-  sunbakedOrange: "#f3724e",
-  warmSunlight: "#fabca3",
-  softBackground: "#f6f1ec",
-  white: "#ffffff",
-  textDark: "#13222b",
-  mutedText: "#5f6b72",
+  black: "#0A0A0A",
+  charcoal: "#1A1A1A",
+  white: "#FFFFFF",
+  offWhite: "#F5F5F5",
+  grey: "#7A7A7A",
+  lightGrey: "#EAEAEA",
+  accent: "#F05A3A",
 };
 
 const navLink = {
-  color: "#ffffff",
+  color: brand.white,
   textDecoration: "none",
   fontSize: "15px",
   fontWeight: 600,
@@ -22,7 +22,7 @@ const sectionLabel = {
   fontSize: "13px",
   textTransform: "uppercase",
   letterSpacing: "1px",
-  color: brand.sunbakedOrange,
+  color: brand.accent,
   fontWeight: 700,
   marginBottom: "12px",
 };
@@ -31,7 +31,7 @@ const sectionTitle = {
   fontSize: "42px",
   fontWeight: 700,
   margin: 0,
-  color: brand.midnightSky,
+  color: brand.black,
   letterSpacing: "-1px",
   lineHeight: 1.05,
 };
@@ -39,8 +39,8 @@ const sectionTitle = {
 const imageCard = {
   borderRadius: "26px",
   overflow: "hidden",
-  boxShadow: "0 18px 40px rgba(24,59,77,0.10)",
-  border: "1px solid rgba(24,59,77,0.06)",
+  boxShadow: "0 18px 40px rgba(0,0,0,0.08)",
+  border: "1px solid rgba(0,0,0,0.06)",
   background: brand.white,
 };
 
@@ -48,8 +48,8 @@ export default function HomePage() {
   return (
     <main
       style={{
-        background: brand.softBackground,
-        color: brand.textDark,
+        background: brand.offWhite,
+        color: brand.black,
         fontFamily: "Inter, Arial, Helvetica, sans-serif",
         minHeight: "100vh",
       }}
@@ -59,7 +59,7 @@ export default function HomePage() {
           position: "sticky",
           top: 0,
           zIndex: 30,
-          background: "rgba(24,59,77,0.88)",
+          background: "rgba(10,10,10,0.92)",
           backdropFilter: "blur(10px)",
           borderBottom: "1px solid rgba(255,255,255,0.08)",
         }}
@@ -109,7 +109,7 @@ export default function HomePage() {
           position: "relative",
           overflow: "hidden",
           backgroundImage:
-            'linear-gradient(90deg, rgba(24,59,77,0.88) 0%, rgba(24,59,77,0.66) 36%, rgba(24,59,77,0.24) 68%, rgba(24,59,77,0.10) 100%), url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=2000&q=80")',
+            'linear-gradient(90deg, rgba(10,10,10,0.88) 0%, rgba(10,10,10,0.68) 34%, rgba(10,10,10,0.28) 66%, rgba(10,10,10,0.10) 100%), url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=2000&q=80")',
           backgroundSize: "cover",
           backgroundPosition: "center center",
           backgroundAttachment: "fixed",
@@ -129,7 +129,7 @@ export default function HomePage() {
             <div
               style={{
                 display: "inline-block",
-                background: "rgba(243,114,78,0.18)",
+                background: "rgba(240,90,58,0.16)",
                 color: brand.white,
                 padding: "12px 18px",
                 borderRadius: "999px",
@@ -138,7 +138,7 @@ export default function HomePage() {
                 letterSpacing: "0.6px",
                 marginBottom: "24px",
                 textTransform: "uppercase",
-                border: "1px solid rgba(255,255,255,0.18)",
+                border: "1px solid rgba(255,255,255,0.14)",
               }}
             >
               Australian Made Commercial Furniture
@@ -147,7 +147,7 @@ export default function HomePage() {
             <h1
               style={{
                 fontSize: "92px",
-                lineHeight: 0.95,
+                lineHeight: 0.94,
                 margin: "0 0 24px 0",
                 letterSpacing: "-3px",
                 color: brand.white,
@@ -156,9 +156,9 @@ export default function HomePage() {
             >
               Furniture with
               <br />
-              warmth,
+              clarity,
               <br />
-              structure
+              warmth
               <br />
               and intent.
             </h1>
@@ -172,16 +172,16 @@ export default function HomePage() {
                 marginBottom: "32px",
               }}
             >
-              W&Co Designs curates premium furniture for workplace, hospitality
-              and public interiors — balancing form, comfort and commercial
-              durability through a distinctly refined Australian lens.
+              W&Co Designs curates premium Australian-made furniture for workplace,
+              hospitality and public interiors — balancing comfort, durability and
+              refined visual impact.
             </p>
 
             <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
               <a
                 href="#categories"
                 style={{
-                  background: brand.sunbakedOrange,
+                  background: brand.accent,
                   color: brand.white,
                   textDecoration: "none",
                   padding: "16px 30px",
@@ -196,14 +196,14 @@ export default function HomePage() {
               <a
                 href="#projects"
                 style={{
-                  background: "rgba(255,255,255,0.12)",
+                  background: "rgba(255,255,255,0.08)",
                   color: brand.white,
                   textDecoration: "none",
                   padding: "16px 30px",
                   borderRadius: "999px",
                   fontWeight: 700,
                   display: "inline-block",
-                  border: "1px solid rgba(255,255,255,0.22)",
+                  border: "1px solid rgba(255,255,255,0.18)",
                 }}
               >
                 View Projects
@@ -223,7 +223,7 @@ export default function HomePage() {
       >
         <div style={{ marginBottom: "28px" }}>
           <div style={sectionLabel}>Categories</div>
-          <h2 style={sectionTitle}>A visual introduction to the collection.</h2>
+          <h2 style={sectionTitle}>A sharper introduction to the collection.</h2>
         </div>
 
         <div
@@ -246,12 +246,12 @@ export default function HomePage() {
             />
             <div style={{ padding: "26px" }}>
               <div style={sectionLabel}>Featured</div>
-              <h3 style={{ fontSize: "34px", margin: "0 0 10px 0", color: brand.midnightSky }}>
+              <h3 style={{ fontSize: "34px", margin: "0 0 10px 0", color: brand.black }}>
                 Reception & lounge furniture
               </h3>
-              <p style={{ color: brand.mutedText, lineHeight: 1.7, margin: 0 }}>
-                Statement pieces for first impressions, waiting areas and hospitality-led
-                environments where comfort and visual confidence matter.
+              <p style={{ color: brand.grey, lineHeight: 1.7, margin: 0 }}>
+                Statement pieces for first impressions, waiting areas and
+                hospitality-led environments where comfort and presence matter.
               </p>
             </div>
           </div>
@@ -277,21 +277,21 @@ export default function HomePage() {
                 <div
                   style={{
                     height: "250px",
-                    background: `linear-gradient(135deg, ${brand.warmSunlight} 0%, #f0e2d5 100%)`,
+                    background: `linear-gradient(135deg, ${brand.lightGrey} 0%, #dcdcdc 100%)`,
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    color: brand.midnightSky,
+                    color: brand.charcoal,
                     fontStyle: "italic",
                   }}
                 >
                   Category Image Placeholder
                 </div>
                 <div style={{ padding: "24px" }}>
-                  <h3 style={{ fontSize: "28px", margin: "0 0 10px 0", color: brand.midnightSky }}>
+                  <h3 style={{ fontSize: "28px", margin: "0 0 10px 0", color: brand.black }}>
                     {title}
                   </h3>
-                  <p style={{ color: brand.mutedText, lineHeight: 1.7, margin: 0 }}>
+                  <p style={{ color: brand.grey, lineHeight: 1.7, margin: 0 }}>
                     {text}
                   </p>
                 </div>
@@ -306,7 +306,7 @@ export default function HomePage() {
           minHeight: "72vh",
           position: "relative",
           backgroundImage:
-            'linear-gradient(90deg, rgba(24,59,77,0.70) 0%, rgba(24,59,77,0.46) 38%, rgba(24,59,77,0.16) 70%, rgba(24,59,77,0.10) 100%), url("https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1800&q=80")',
+            'linear-gradient(90deg, rgba(10,10,10,0.76) 0%, rgba(10,10,10,0.50) 38%, rgba(10,10,10,0.16) 70%, rgba(10,10,10,0.08) 100%), url("https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1800&q=80")',
           backgroundSize: "cover",
           backgroundPosition: "center center",
           backgroundAttachment: "fixed",
@@ -326,8 +326,8 @@ export default function HomePage() {
           <div
             style={{
               maxWidth: "700px",
-              background: "rgba(255,255,255,0.10)",
-              border: "1px solid rgba(255,255,255,0.16)",
+              background: "rgba(255,255,255,0.08)",
+              border: "1px solid rgba(255,255,255,0.14)",
               borderRadius: "28px",
               padding: "34px",
               backdropFilter: "blur(6px)",
@@ -338,7 +338,7 @@ export default function HomePage() {
                 fontSize: "13px",
                 textTransform: "uppercase",
                 letterSpacing: "1px",
-                color: brand.warmSunlight,
+                color: brand.accent,
                 fontWeight: 700,
                 marginBottom: "12px",
               }}
@@ -367,8 +367,8 @@ export default function HomePage() {
               }}
             >
               From specifier-led fitouts to hospitality interiors, W&Co Designs
-              presents furniture that combines longevity, warmth and commercial
-              performance without compromising visual clarity.
+              presents furniture that combines longevity, clarity and commercial
+              performance without compromising aesthetic confidence.
             </p>
           </div>
         </div>
@@ -384,7 +384,7 @@ export default function HomePage() {
       >
         <div style={{ marginBottom: "28px" }}>
           <div style={sectionLabel}>Featured Selection</div>
-          <h2 style={sectionTitle}>Structured, image-led blocks for your product story.</h2>
+          <h2 style={sectionTitle}>Image-led product blocks with stronger contrast.</h2>
         </div>
 
         <div
@@ -403,28 +403,28 @@ export default function HomePage() {
               <div
                 style={{
                   height: "340px",
-                  background: `linear-gradient(135deg, ${brand.warmSunlight} 0%, #edd9cc 100%)`,
+                  background: `linear-gradient(135deg, ${brand.lightGrey} 0%, #d8d8d8 100%)`,
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  color: brand.midnightSky,
+                  color: brand.charcoal,
                   fontStyle: "italic",
                 }}
               >
                 Product Image Placeholder
               </div>
               <div style={{ padding: "24px" }}>
-                <h3 style={{ fontSize: "30px", margin: "0 0 12px 0", color: brand.midnightSky }}>
+                <h3 style={{ fontSize: "30px", margin: "0 0 12px 0", color: brand.black }}>
                   {title}
                 </h3>
-                <p style={{ color: brand.mutedText, lineHeight: 1.7, marginBottom: "18px" }}>
+                <p style={{ color: brand.grey, lineHeight: 1.7, marginBottom: "18px" }}>
                   Handcrafted in Australia and designed for interiors that need
-                  durability, warmth and visual confidence.
+                  durability, warmth and strong visual presence.
                 </p>
                 <div
                   style={{
                     fontSize: "14px",
-                    color: brand.sunbakedOrange,
+                    color: brand.accent,
                     fontWeight: 700,
                     letterSpacing: "0.2px",
                   }}
@@ -480,10 +480,10 @@ export default function HomePage() {
                 }}
               />
               <div style={{ padding: "26px" }}>
-                <h3 style={{ fontSize: "30px", margin: "0 0 12px 0", color: brand.midnightSky }}>
+                <h3 style={{ fontSize: "30px", margin: "0 0 12px 0", color: brand.black }}>
                   {title}
                 </h3>
-                <p style={{ color: brand.mutedText, lineHeight: 1.7, margin: 0 }}>
+                <p style={{ color: brand.grey, lineHeight: 1.7, margin: 0 }}>
                   {text}
                 </p>
               </div>
@@ -502,7 +502,7 @@ export default function HomePage() {
       >
         <div
           style={{
-            background: brand.midnightSky,
+            background: brand.black,
             color: brand.white,
             borderRadius: "30px",
             padding: "46px",
@@ -514,7 +514,7 @@ export default function HomePage() {
           }}
         >
           <div>
-            <div style={{ ...sectionLabel, color: brand.warmSunlight }}>Catalogue</div>
+            <div style={{ ...sectionLabel, color: brand.accent }}>Catalogue</div>
             <h2 style={{ fontSize: "38px", margin: "0 0 10px 0" }}>
               Download our collection
             </h2>
@@ -534,13 +534,13 @@ export default function HomePage() {
           <button
             disabled
             style={{
-              background: brand.sunbakedOrange,
+              background: brand.accent,
               color: brand.white,
               border: "none",
               padding: "16px 30px",
               borderRadius: "999px",
               fontSize: "16px",
-              opacity: 0.72,
+              opacity: 0.78,
             }}
           >
             Download Coming Soon
@@ -561,8 +561,8 @@ export default function HomePage() {
             background: brand.white,
             borderRadius: "30px",
             padding: "52px 36px",
-            boxShadow: "0 14px 40px rgba(24,59,77,0.06)",
-            border: "1px solid rgba(24,59,77,0.05)",
+            boxShadow: "0 14px 40px rgba(0,0,0,0.06)",
+            border: "1px solid rgba(0,0,0,0.05)",
             textAlign: "center",
           }}
         >
@@ -570,7 +570,7 @@ export default function HomePage() {
           <h2 style={{ ...sectionTitle, marginBottom: "14px" }}>Connect With Us</h2>
           <p
             style={{
-              color: brand.mutedText,
+              color: brand.grey,
               marginBottom: "24px",
               fontSize: "18px",
               lineHeight: 1.7,
@@ -595,7 +595,7 @@ export default function HomePage() {
             <a
               href="tel:0398738484"
               style={{
-                background: brand.sunbakedOrange,
+                background: brand.accent,
                 color: brand.white,
                 textDecoration: "none",
                 padding: "16px 28px",
@@ -612,12 +612,12 @@ export default function HomePage() {
               rel="noopener noreferrer"
               style={{
                 background: brand.white,
-                color: brand.midnightSky,
+                color: brand.black,
                 textDecoration: "none",
                 padding: "16px 28px",
                 borderRadius: "999px",
                 fontWeight: 700,
-                border: "1px solid rgba(24,59,77,0.12)",
+                border: "1px solid rgba(0,0,0,0.12)",
               }}
             >
               Instagram
@@ -628,7 +628,7 @@ export default function HomePage() {
 
       <footer
         style={{
-          background: brand.midnightSky,
+          background: brand.black,
           color: brand.white,
           padding: "32px",
           marginTop: "10px",
